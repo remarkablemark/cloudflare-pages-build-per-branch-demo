@@ -1,11 +1,11 @@
 {
   "source": "src/index.html",
   "scripts": {
-    "build": "parcel build",
+    "build": "bash scripts/build.sh",
     "clean": "rm -rf dist/",
-    "dev": "npm run build",
-    "production": "cp .env.production .env && npm run build",
-    "staging": "cp .env.staging .env && npm run build",
+    "dev": "parcel build",
+    "production": "cp .env.production .env && parcel build",
+    "staging": "cp .env.staging .env && parcel build",
     "start": "parcel --open"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
