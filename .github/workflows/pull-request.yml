@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         branch: [dev, staging, production]
+    continue-on-error: true
 
     steps:
       - uses: actions/checkout@v3
