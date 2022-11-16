@@ -1,6 +1,7 @@
 # !/bin/bash
 
-echo $CF_PAGES_BRANCH
+echo "CF_PAGES_BRANCH=$CF_PAGES_BRANCH"
+echo "NODE_ENV=$NODE_ENV"
 
 if [ "$CF_PAGES_BRANCH" == "production" ]; then
   # Run the "production" script in `package.json` on the "production" branch
