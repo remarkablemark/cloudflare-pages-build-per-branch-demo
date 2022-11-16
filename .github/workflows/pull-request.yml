@@ -21,3 +21,4 @@ jobs:
       - run: gh pr merge --auto --merge ${{ github.event.pull_request.html_url }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
+        continue-on-error: true
