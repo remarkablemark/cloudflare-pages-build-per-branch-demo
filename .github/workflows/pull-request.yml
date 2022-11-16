@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: [dev, staging, production]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: ${{ matrix.branch }}
+
+      - run: gh pr merge --auto --merge ${{ github.event.pull_request.html_url }}
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
