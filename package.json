@@ -3,6 +3,9 @@
   "scripts": {
     "build": "parcel build",
     "clean": "rm -rf dist/",
+    "dev": "npm run build",
+    "production": "cp .env.production .env && npm run build",
+    "staging": "cp .env.staging .env && npm run build",
     "start": "parcel --open"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
