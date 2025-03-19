@@ -10,7 +10,7 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "parcel": "2.13.3"
+    "parcel": "2.14.1"
   },
   "private": true
 }
